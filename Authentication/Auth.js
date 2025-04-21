@@ -49,10 +49,12 @@ if (loginForm) {
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const usernameOrEmail = document.getElementById("loginUsername").value;
-    const password = document.getElementById("loginPassword").value;
+    let usernameOrEmail = document.getElementById("loginUsername").value.trim();
+    const password = document.getElementById("loginPassword").value.trim();
     if (usernameOrEmail.includes("@gmail")){
-       usernameOrEmail=usernameOrEmail.toLowerCase()
+      usernameOrEmail=usernameOrEmail.toLowerCase()
+    }else{
+      usernameOrEmail=usernameOrEmail 
     }
 
     let usersData = JSON.parse(localStorage.getItem("usersData")) || [];
