@@ -51,6 +51,9 @@ if (loginForm) {
 
     const usernameOrEmail = document.getElementById("loginUsername").value;
     const password = document.getElementById("loginPassword").value;
+    if (usernameOrEmail.includes("@gmail")){
+       usernameOrEmail=usernameOrEmail.toLowerCase()
+    }
 
     let usersData = JSON.parse(localStorage.getItem("usersData")) || [];
 
