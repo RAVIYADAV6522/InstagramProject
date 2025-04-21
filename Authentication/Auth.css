@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f0f0;
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  width: 45%;
+  height: 50%;
+  background: white;
+  padding: 20px;
+
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input,
+button {
+  display: block;
+  width: 90%;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+div {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  form {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  form {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  form {
+    width: 80%;
+  }
+}

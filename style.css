@@ -1,0 +1,374 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+#main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+/* ------------------------------------ navbar css ------------------ */
+#nav {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-right: 1px solid black;
+}
+
+
+#instamiddle {
+  width: 100%;
+}
+#instamiddle .middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 12%;
+}
+.middle img {
+  width: 15%;
+  height: 45%;
+}
+#instabottom {
+  width: 100%;
+  height: 10%;
+}
+#instabottom .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 80%;
+}
+
+#instabottom .bottom img {
+  width: 15%;
+  height: 30%;
+}
+
+/*-------------------------------------------- main body csss ----------------------------------*/
+#mainbody {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* background-color: pink; */
+  overflow: scroll;
+}
+#posts {
+  display: flex;
+  justify-content: center;
+  /* background-color: aqua; */
+  border-right: 1px solid black;
+  width: 100%;
+}
+.centre-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10%;
+  width: 75%;
+
+  /* background-color: greenyellow; */
+}
+.stories {
+  display: flex;
+  width: 100%;
+}
+.storyimg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+  position: relative;
+}
+.storyimg p {
+  position: absolute;
+  top: 70%;
+}
+.storyimg img {
+  border: 4px solid palevioletred;
+  border-radius: 50%;
+  width: 80%;
+}
+.post {
+  width: 80%;
+  gap: 50px;
+  margin-top: 15%;
+  /* background-color: white; */
+  display: flex;
+  flex-direction: column;
+}
+.post-items,
+.post-head,
+.post-img,
+.post-bottom {
+  width: 100%;
+}
+.post-items {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+.post-img img {
+  width: 100%;
+}
+.post-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head-content {
+  display: flex;
+  gap: 10px;
+  width: 70%;
+}
+.head-sidemenu {
+  padding-right: 5px;
+  font-size: 30px;
+}
+.head-content img {
+  width: 17%;
+}
+.post-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.likeandcomment {
+  display: flex;
+  gap: 7%;
+  width: 60%;
+}
+.likeandcomment img {
+  width: 7%;
+}
+.save {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+.save img {
+  margin-left: 70%;
+  width: 15%;
+}
+#follow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 30px;
+  /* background-color: blue; */
+}
+/* p {
+  height: 500px;
+  background-color: greenyellow;
+} */
+
+/* ---------------- right part styling -------------- */
+#myprofile {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+#imgdata {
+  display: flex;
+  /* gap: 10px; */
+  width: 60%;
+}
+#img {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  /* background-color: blueviolet; */
+  padding-left: 15px;
+}
+#img img {
+  width: 70%;
+}
+#data {
+  width: 70%;
+  /* background-color: beige; */
+}
+#switch {
+  width: 20%;
+  /* background-color: coral; */
+}
+
+/* ----------------------suggestedprofile css -----------------------------*/
+#suggested-profiles-list {
+  display: flex;
+  flex-direction: column;
+}
+#suggested-profiles {
+  display: flex;
+  flex-direction: column;
+  /* background-color: chartreuse; */
+}
+#suggested-head {
+  display: flex;
+  justify-content: space-around;
+  /* background-color: darkgreen; */
+}
+
+.suggested-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+.suggestion-imgdata {
+  display: flex;
+  /* gap: 10px; */
+  width: 60%;
+}
+.suggestionimg {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  /* background-color: blueviolet; */
+  padding-left: 15px;
+}
+.suggestionimg img {
+  width: 70%;
+}
+.storyimg p {
+  top: 85%;
+}
+.suggestion-data {
+  width: 70%;
+}
+.suggested-follow {
+  width: 20%;
+}
+
+#footer {
+  width: 85%;
+}
+@media screen and (max-width: 1160px) {
+  #follow {
+    display: none;
+  }
+  #mainbody {
+    grid-template-columns: 1fr;
+  }
+  .storyimg p {
+    top: 85%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .storyimg p {
+    position: absolute;
+    top: 75%;
+  }
+  .middle h3 {
+    display: none;
+  }
+  .bottom h3 {
+    display: none;
+  }
+
+  #instamiddle {
+    height: 60%;
+  }
+  #instamiddle .middle {
+    align-items: center;
+    justify-content: center;
+  }
+  #home {
+    height: 50%;
+    width: 20%;
+  }
+  #search {
+    height: 50%;
+    width: 20%;
+    padding-left: 3px;
+  }
+  #explore {
+    height: 50%;
+    width: 20%;
+    padding-right: 7px;
+  }
+  #reels {
+    height: 50%;
+    width: 20%;
+    padding-left: 7px;
+  }
+  #messages {
+    height: 50%;
+    width: 20%;
+    padding-right: 3px;
+  }
+  #notifications {
+    height: 50%;
+    width: 20%;
+    padding-right: 8px;
+  }
+  #create {
+    height: 50%;
+    width: 20%;
+    padding-right: 2px;
+  }
+  #profile {
+    height: 50%;
+    width: 20%;
+  }
+  #more {
+    height: 60%;
+    width: 30%;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .storyimg p {
+    position: absolute;
+    top: 80%;
+  }
+
+  #nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: none;
+    padding-left: 5%;
+    padding-top: 2%;
+    height: 10vh;
+    /* display: none; */
+  }
+  #instabottom {
+    width: 40%;
+    height: 100%;
+  }
+  .bottom {
+    padding-left: 30%;
+    height: 100%;
+  }
+
+  #main {
+    display: flex;
+    flex-direction: column;
+  }
+  #instamiddle {
+    display: none;
+  }
+  
+  #mainbody {
+    width: 100vw;
+    height: 100vh;
+  }
+  .centre-post {
+    width: 100vw;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .head-content img {
+    width: 22%;
+  }
+}
