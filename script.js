@@ -1,6 +1,5 @@
 // home page logic ----------------------------------------------------------
 
-
 const logoutIcon = document.getElementById("more");
 // console.log(logoutIcon);
 const logoutPara = document.getElementById("logoutpara");
@@ -13,6 +12,10 @@ function logout() {
 
 const username = sessionStorage.getItem("loggedInUser");
 console.log(username);
+
+if (!username) {
+  window.location.href = "../Authentication/index.html";
+}
 
 logoutIcon.addEventListener("click", () => {
   logout();
