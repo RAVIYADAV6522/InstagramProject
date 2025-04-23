@@ -381,15 +381,22 @@ body {
   #instabottom {
     display: flex;
     margin-right: 10px;
-    width: 25%;
+    width: 150px;
     height: 100%;
+    /* background-color: aquamarine; */
   }
   .bottomlogo {
+    /* width: 90%; */
+    width: 100px;
     display: flex;
     margin-left: 20px;
 
     /* background-color: blue; */
     text-align: right;
+  }
+  .bottomlogo img {
+    width: 40px;
+    /* background-color: red; */
   }
   /* .bottom {
     padding-left: 30%;
