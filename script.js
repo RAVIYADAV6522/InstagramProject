@@ -2,7 +2,7 @@
 
 const logoutIcon = document.getElementById("more");
 // console.log(logoutIcon);
-const logoutPara = document.getElementById("logoutpara");
+const logoutPara = document.getElementById("pmore");
 // console.log(logoutPara);
 
 function logout() {
