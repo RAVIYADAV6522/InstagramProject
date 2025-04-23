@@ -7,14 +7,14 @@ const logoutPara = document.getElementById("pmore");
 
 function logout() {
   sessionStorage.removeItem("loggedInUser");
-  window.location.href = "../Authentication/index.html";
+  window.location.href = "login.html";
 }
 
 const username = sessionStorage.getItem("loggedInUser");
 console.log(username);
 
 if (!username) {
-  window.location.href = "../Authentication/index.html";
+  window.location.href = "login.html";
 }
 
 logoutIcon.addEventListener("click", () => {

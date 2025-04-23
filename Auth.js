@@ -49,7 +49,7 @@ if (registerForm) {
     localStorage.setItem("usersData", JSON.stringify(usersData));
     alert("signup successfull");
     registerForm.reset();
-    window.location.href = "index.html";
+    window.location.href = "login.html";
   });
 }
 
@@ -84,7 +84,7 @@ if (loginForm) {
       // console.log(username)
       sessionStorage.setItem("loggedInUser", username);
       alert("loggin successfull");
-      window.location.href = "../insta.html";
+      window.location.href = "index.html";
     } else {
       alert("invalid credentials");
     }
