@@ -10,7 +10,7 @@ if (registerForm) {
   registerForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const username = document.getElementById("signupUsername").value.trim();
+    const username = document.getElementById("signupUsername").value.trim().toLowerCase();
     const password = document.getElementById("signupPassword").value.trim();
     const email = document.getElementById("Email").value.trim().toLowerCase();
 
@@ -19,14 +19,25 @@ if (registerForm) {
 
     let userExists = usersData.find((user) => user.username === username);
     let userEmailExists = usersData.find((user) => user.email === email);
-    if (userExists) {
-      alert("user already exists");
-      return;
+    
+    // if (userEmailExists) {
+    //   alert("Email already exists");
+    //   return;
+    // }
+    // else if (userExists) {
+    //   alert("user already exists");
+    //   return;
+    // }
+    if(userExists){
+       alert("username already exist")
+       return 
     }
-    if (userEmailExists) {
-      alert("Email already exists");
-      return;
+    if(userEmailExists){
+      alert("Email already in use")
+      return 
     }
+
+    
     if (!ValidatePassword(password)) {
       alert(
         "Password must be 8+ chars, with upper, lower, number & special char."
@@ -49,16 +60,16 @@ if (loginForm) {
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    let usernameOrEmail = document.getElementById("loginUsername").value.trim();
+    const usernameOrEmail = document.getElementById("loginUsername").value.trim().toLowerCase();
     const password = document.getElementById("loginPassword").value.trim();
-    if (usernameOrEmail.includes("@gmail")){
-      usernameOrEmail=usernameOrEmail.toLowerCase()
-    }else{
-      usernameOrEmail=usernameOrEmail 
-    }
+    // if (usernameOrEmail.includes("@gmail")){
+    //   usernameOrEmail=usernameOrEmail.toLowerCase()
+    // }else{
+    //   usernameOrEmail=usernameOrEmail 
+    // }
 
     let usersData = JSON.parse(localStorage.getItem("usersData")) || [];
-
+    console.log(usersData)
     let userExists = usersData.find((user) => {
       if (user.username === usernameOrEmail && user.password === password) {
         return user;
