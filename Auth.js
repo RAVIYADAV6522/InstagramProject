@@ -20,14 +20,7 @@ if (registerForm) {
     let userExists = usersData.find((user) => user.username === username);
     let userEmailExists = usersData.find((user) => user.email === email);
     
-    // if (userEmailExists) {
-    //   alert("Email already exists");
-    //   return;
-    // }
-    // else if (userExists) {
-    //   alert("user already exists");
-    //   return;
-    // }
+  
     if(userExists){
        alert("username already exist")
        return 
@@ -62,11 +55,7 @@ if (loginForm) {
 
     const usernameOrEmail = document.getElementById("loginUsername").value.trim().toLowerCase();
     const password = document.getElementById("loginPassword").value.trim();
-    // if (usernameOrEmail.includes("@gmail")){
-    //   usernameOrEmail=usernameOrEmail.toLowerCase()
-    // }else{
-    //   usernameOrEmail=usernameOrEmail 
-    // }
+    
 
     let usersData = JSON.parse(localStorage.getItem("usersData")) || [];
     console.log(usersData)
@@ -80,9 +69,9 @@ if (loginForm) {
 
     if (userExists) {
       // console.log(userExists);
-      const {username} = userExists
+      const {username,email} = userExists 
       // console.log(username)
-      sessionStorage.setItem("loggedInUser", username);
+      sessionStorage.setItem("loggedInUser", [username,email]);
       alert("loggin successfull");
       window.location.href = "index.html";
     } else {
