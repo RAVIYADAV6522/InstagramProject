@@ -2,6 +2,9 @@
 let profileName = document.getElementById("username");
 let profileEmail = document.getElementById("email");
 
+let myName = document.getElementById("myname");
+let myEmail = document.getElementById("myemail");
+
 const profileIcon = document.getElementById("more");
 const dropdown = document.getElementById("dropdown");
 const logoutBtn = document.getElementById("logout");
@@ -20,6 +23,9 @@ console.log(username, email);
 
 profileEmail.innerText = `${email}`;
 profileName.innerText = `${username}`;
+
+myEmail.innerText = `${email}`;
+myName.innerText = `${username}`;
 
 if (!username) {
   window.location.href = "login.html";
